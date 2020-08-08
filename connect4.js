@@ -88,7 +88,9 @@ class Game {
 	endGame(msg) {
 		const clicks = document.getElementById("column-top");
 		clicks.removeEventListener("click", this.boundHandleClick);
-		alert(msg);
+		setTimeout(function() {
+			alert(msg);
+		}, 600);
 	}
 
 	/** handleClick: handle click of column top to play piece */
